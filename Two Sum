@@ -1,0 +1,22 @@
+public class Solution {
+    public int[] TwoSum(int[] nums, int target) {
+        List<int> Result=new List<int>();
+        Dictionary<int,int>map=new Dictionary<int,int>();
+        for(var i=0;i<nums.Length;i++){
+            var numberForTarget=target-nums[i];
+            if(map.ContainsKey(numberForTarget)){
+                Result.Add(i);
+                Result.Add(map[numberForTarget]);
+                break;
+            }
+            else{
+                if(map.ContainsKey(nums[i])){
+                }
+                else{
+                map.Add(nums[i],i);
+                }
+            }
+        }
+        return Result.ToArray();
+    }
+}
