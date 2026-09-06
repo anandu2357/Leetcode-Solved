@@ -1,0 +1,18 @@
+public class Solution {
+    public bool ContainsDuplicate(int[] nums) {
+       
+       HashSet <int> newSet=new HashSet<int>();
+       var Result=false;
+       foreach(var number in nums){
+        if(newSet.Contains(number)){
+            Result=true;
+            break;
+        }
+        else{
+        newSet.Add(number);           
+        }
+       }
+
+       return Result;
+
+      
